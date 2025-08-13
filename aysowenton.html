@@ -1,0 +1,274 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💗</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #000;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    #hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 24px;
+      animation: fall linear infinite;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    .container {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      color: #ff4081;
+      text-shadow: 0 0 15px #ff4081;
+    }
+
+    .counter {
+      font-size: 1.6em;
+      margin: 10px 0;
+      font-weight: bold;
+      text-shadow: 0 0 15px #fff, 0 0 25px #ff69b4;
+    }
+
+    .date {
+      margin-top: 20px;
+      font-style: italic;
+      font-size: 1.1em;
+      color: #aaa;
+    }
+
+    #video-container {
+      margin-top: 30px;
+    }
+
+    video {
+      width: 720px;
+      height: 1280px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .music-section {
+      margin-top: 30px;
+    }
+
+    .music-section p {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+
+    .music-section button {
+      background: none;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .social-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-buttons .social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-buttons button {
+      padding: 10px;
+      background-color: #ff4081;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .social-buttons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .label {
+      font-size: 0.9em;
+      color: #fff;
+    }
+
+    /* Geçişli yazı */
+    .scroll-text {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .scroll-text span {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 1.4em;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffff, #ffcc00);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 8s infinite, scrollLeft 15s linear infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% }
+      100% { background-position: 400% }
+    }
+
+    @keyframes scrollLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <div class="container">
+    <h1>🤍</h1>
+    <div class="counter" id="days">0 gün</div>
+    <div class="counter" id="hours">0 saat</div>
+    <div class="counter" id="minutes">0 dakika</div>
+    <div class="counter" id="seconds">0 saniye</div>
+    <div class="date">27 Mayıs 2025, 14:26'dan beri</div>
+
+    <!-- Video Alanı -->
+    <div id="video-container">
+      <video controls autoplay loop>
+        <source src="gözleria.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+    </div>
+
+    <!-- Müzik Alanı -->
+    <div class="music-section">
+      <p>Sensiz olmaz</p>
+      <button onclick="document.getElementById('audio').play()">🎵</button>
+      <audio id="audio">
+        <source src="sensizolmaz.mp3" type="audio/mp4">
+        Tarayıcınız ses etiketini desteklemiyor.
+      </audio>
+    </div>
+
+    <!-- Sosyal Medya Butonları -->
+    <div class="social-buttons">
+      <div class="social">
+        <span class="label">A</span>
+        <button onclick="window.location.href=''https://www.instagram.com/aysonuzz81?igsh=bWFpZHdpeWU1djl6">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </button>
+      </div>
+      <div class="social">
+        <span class="label">Ç</span>
+        <button onclick="window.location.href=''https://www.instagram.com/went0_n63?igsh=Ym1tdDBkNnB3MHJk">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alt geçişli yazı -->
+  <div class="scroll-text">
+    <span>Ayşe 💕 Çınar</span>
+  </div>
+
+  <script>
+    function updateCounter() {
+      const startDate = new Date(2025, 4, 27, 14, 26, 0);
+      const now = new Date();
+      const diff = now - startDate;
+
+      if (diff < 0) {
+        document.getElementById("days").textContent = "Henüz başlamadı";
+        document.getElementById("hours").textContent = "";
+        document.getElementById("minutes").textContent = "";
+        document.getElementById("seconds").textContent = "";
+        return;
+      }
+
+      const secondsTotal = Math.floor(diff / 1000);
+      const minutesTotal = Math.floor(secondsTotal / 60);
+      const hoursTotal = Math.floor(minutesTotal / 60);
+      const daysTotal = Math.floor(hoursTotal / 24);
+
+      const hours = hoursTotal % 24;
+      const minutes = minutesTotal % 60;
+      const seconds = secondsTotal % 60;
+
+      document.getElementById("days").textContent = `${daysTotal} gün`;
+      document.getElementById("hours").textContent = `${hours} saat`;
+      document.getElementById("minutes").textContent = `${minutes} dakika`;
+      document.getElementById("seconds").textContent = `${seconds} saniye`;
+    }
+
+    function createEmojiRain() {
+      const container = document.getElementById("hearts");
+      const emojis = ["💗", "😻"];
+      const count = 60;
+
+      for (let i = 0; i < count; i++) {
+        const emoji = document.createElement("div");
+        emoji.className = "emoji";
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.left = Math.random() * 100 + "vw";
+        emoji.style.top = -40 + "px";
+        emoji.style.fontSize = Math.random() * 20 + 20 + "px";
+        emoji.style.animationDuration = Math.random() * 3 + 5 + "s";
+        emoji.style.opacity = Math.random() * 0.5 + 0.4;
+
+        container.appendChild(emoji);
+
+        emoji.addEventListener("animationiteration", () => {
+          emoji.style.left = Math.random() * 100 + "vw";
+          emoji.style.top = -40 + "px";
+        });
+      }
+    }
+
+    window.onload = function () {
+      updateCounter();
+      setInterval(updateCounter, 1000);
+      createEmojiRain();
+    };
+  </script>
+</body>
+</html>
